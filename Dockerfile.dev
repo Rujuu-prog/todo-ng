@@ -1,0 +1,23 @@
+# 開発環境用の Node.js イメージ
+FROM node:18
+
+# 作業ディレクトリを設定
+WORKDIR /app
+
+# package.json と package-lock.json をコピー
+COPY package.json package-lock.json ./
+
+# 依存関係をインストール
+RUN npm install
+
+# プロジェクト全体をコピー（ここで angular.json も含まれる）
+COPY . .
+
+# Angular の匿名データ送信を無効化
+RUN cd /app && npx ng analytics off
+
+# ポートを開放
+EXPOSE 4200
+
+# 開発用のサーバーを実行
+CMD ["npm", "run", "dev-docker"]
