@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+/* Angular Material のプリセットテーマを適用 */
+@import "@angular/material/prebuilt-themes/magenta-violet.css";
+
+/* カスタムダークモードスタイル */
+:root {
+  --bg-color: #121212;
+  --card-bg-color: #1e1e1e;
+  --text-color: #ffffff;
+  --border-color: #333;
+  --checkbox-color: #bb86fc;
+}
+
+html, body {
+  height: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* Material Card スタイル調整 */
+mat-card {
+  background-color: var(--card-bg-color) !important;
+  color: var(--text-color) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* チェックボックスの色変更 */
+mat-checkbox {
+  --mdc-checkbox-unchecked-color: var(--checkbox-color);
+  --mdc-checkbox-checked-color: var(--checkbox-color);
+  --mdc-checkbox-indeterminate-color: var(--checkbox-color);
+}
+
+/* ボタンスタイルをカスタマイズ */
+mat-button, mat-raised-button {
+  color: var(--text-color) !important;
+}

@@ -1,0 +1,7 @@
+.task-input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto 16px;
+  max-width: 400px;
+}

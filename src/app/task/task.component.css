@@ -1,0 +1,19 @@
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+mat-checkbox {
+  --mdc-checkbox-unchecked-color: var(--checkbox-color);
+  --mdc-checkbox-checked-color: var(--checkbox-color);
+  --mdc-checkbox-indeterminate-color: var(--checkbox-color);
+}

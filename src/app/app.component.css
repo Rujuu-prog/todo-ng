@@ -1,0 +1,15 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* 他の要素の上に表示 */
+  background-color: #1e1e1e; /* ダークモード用 */
+  color: white;
+  height: 64px;
+}
+
