@@ -17,10 +17,15 @@ export class TodoListComponent {
     this.tasks.update(tasks => [...tasks, { name, completed: false }]);
   }
 
+  deleteTask(index: number) {
+    this.tasks.update(tasks => tasks.filter((_, i) => i !== index)); // 指定されたタスクを削除
+  }
+
   toggleTask(index: number) {
     this.tasks.update(tasks => {
       tasks[index].completed = !tasks[index].completed;
       return [...tasks];
     });
   }
+
 }

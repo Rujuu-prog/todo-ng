@@ -1,7 +1,12 @@
 <ul class="task-list">
   <li class="task-item" *ngFor="let task of tasks(); let i = index; trackBy: trackTask">
-    <mat-checkbox [checked]="task.completed" (change)="toggleTaskStatus.emit(i)">
+    <mat-checkbox
+      [checked]="task.completed"
+      (change)="toggleTaskStatus.emit(i)">
       {{ task.name }}
     </mat-checkbox>
+    <button mat-icon-button color="warn" (click)="deleteTask.emit(i)">
+      <mat-icon>delete</mat-icon>
+    </button>
   </li>
 </ul>

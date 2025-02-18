@@ -1,4 +1,9 @@
 <div class="todo-container">
   <app-task-input (addTask)="addNewTask($event)"></app-task-input>
-  <app-task [tasks]="tasks.asReadonly()" (toggleTaskStatus)="toggleTask($event)"></app-task>
+  <app-task
+    [tasks]="tasks.asReadonly()"
+    (toggleTaskStatus)="toggleTask($event)"
+    (deleteTask)="deleteTask($event)">
+  </app-task>
 </div>
+
